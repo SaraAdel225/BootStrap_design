@@ -1,0 +1,245 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    --background-color: #19283f;
+    --background-button: #ff3150;
+    --color-button: #ffc400;
+    --green-color: #33d1cc;
+    --section-color: #33d1cc27;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: var(--background-color) !important;
+    padding: 0px;
+}
+.button_style{
+    background-color: var(--background-button);
+    color: var(--color-button);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+.button_style:focus{
+    border: 2px solid #689eeef5;
+}
+.fa-magnifying-glass{
+    margin: 0 10px;
+    color:var(--green-color);
+    border-left: 1px solid ;
+    padding: 5px 15px ;
+}
+.nav-link{
+    color: white;
+    font-weight: bold;
+}
+.nav-link:hover,
+.nav-link.active{
+    color: var(--green-color) !important;
+}
+.navbar-toggler-icon{
+    background-color: white;
+    color: white !important;
+}
+.navbar-toggler{
+    color:white;
+    border:white 1px solid; 
+}
+/* Start Home_page*/
+.Home_page{
+    background-color: var(--background-color);
+    color:white;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+.Home_page .content{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title,
+.Home_page .content p{
+    font-weight: bold;
+}
+/* end Home page*/
+.address{
+    position: relative;
+}
+.address::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* server page */
+.server .content h4{
+    font-weight: bold;
+    color:var(--color-button)
+}
+.server .content div svg{
+    font-size: 60px ;
+    color:var(--green-color)
+}
+.server .content {
+    counter-reset: my-counter;
+    margin-top: 100px;
+}
+.server .content div{
+    position: relative;
+}
+.server .content div::before{
+    content: counter(my-counter);
+    counter-increment: my-counter 1;
+    position: absolute;
+    font-size: 250px;
+    color: var(--section-color);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    bottom: 10%;
+    left: 30%;
+    z-index: -1;
+}
+/* Start portfolio page */
+.portfolio{
+    background-color: var(--section-color);
+}
+.portfolio .content ul li{
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.portfolio .content ul li:hover:not(.active){
+    color:var(--background-button)
+}
+.portfolio .image div{
+    border: 5px solid var(--section-color);
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .image div::after{
+    content: "Application";
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background-color: #33d1cca4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateX(-700px);
+    transition: .3s;
+}
+.portfolio .image div:hover::after{
+    top: 8px;
+    left: 8px;
+    transform: translate(0px);
+}
+.portfolio .image div img{
+    width: 700px;
+}
+/* End portfolio page */
+/* Start about page */
+.about  .content-img{
+    position: relative;
+    overflow: hidden;
+}
+.about  .content-img .sector{
+    position: absolute;
+    left: 98px;
+    top: 19px;
+    font-size: 20px;
+    width: 580px;
+    height: 352px ;
+    background-color: #19283f;
+}
+.about  .content-img .sector-img{
+    width: 200px;
+    margin-top: 55px;
+}
+@media (max-width: 1080px){
+    /* .about  .content-img .sector{
+        left: 35px;
+        top: 10px;
+        width: 310px;
+        height: 190px ;
+    }
+    .about  .content-img .sector-img{
+        width: 150px;
+    } */
+    .about  .content-img .sector{
+        display: none;
+    }
+}
+/* End about page */
+/* Start teem page */
+.teem {
+    background-color: var(--section-color);
+}
+.teem .container h1{
+    color:var(--color-button)
+}
+.teem .container .content .div_one {
+    border: 10px solid var(--section-color);
+}
+.teem .container .content .div_one h3{
+    background-color: var(--green-color);
+}
+/* end teem page */
+/* Start project page */
+.project_page{
+    background-color: var(--background-color);
+}
+/* end project page */
+/* end page */
+.end_page {
+    background-color: var(--color-button);
+}
+.end_page h5{
+    font-weight: 700;
+}
+.end_page input{
+    background-color: transparent;
+    color:white;
+    border: none;
+    border-bottom: 2px white solid;
+    padding-bottom: 10px;
+    outline: none;
+}
+.end_page input::placeholder{
+    color:white;
+}
+.end_page input:placeholder-shown {
+    color:white;
+}
+.end_page button{
+    background-color: var(--background-color);
+}
+@media (max-width: 790px){
+    .end_page button{
+        margin-top: 20px ;
+    }
+    .end_page h5{
+        margin-bottom: 20px ;
+    }
+}
+.finished{
+    background-color: var(--background-color);
+}
+.finished p .name{
+    color: var(--green-color);
+}
+.finished p .bon{
+    color: var(--color-button);
+}
+.finished img{
+    cursor: pointer;
+}
